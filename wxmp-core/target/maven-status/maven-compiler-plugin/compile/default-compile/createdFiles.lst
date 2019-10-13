@@ -1,0 +1,8 @@
+com\kochun\wxmp\core\bo\system\SysUser.class
+com\kochun\wxmp\core\mapper\system\SysUserMapper.class
+com\kochun\wxmp\core\service\system\impl\SysUserServiceImpl.class
+com\kochun\wxmp\core\service\system\SysUserService.class
+mybatisplus\generator\CodeGenerator$2.class
+mybatisplus\generator\CodeGenerator.class
+com\kochun\wxmp\core\utils\JsonUtils.class
+mybatisplus\generator\CodeGenerator$1.class
