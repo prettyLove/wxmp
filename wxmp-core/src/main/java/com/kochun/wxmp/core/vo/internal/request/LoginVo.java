@@ -4,11 +4,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class LoginVo {
 
-	@ApiModelProperty(value = "用户名", name = "username", example = "admin")
+	@ApiModelProperty(value = "用户名", name = "username", example = "test")
 	private String username;
-	@ApiModelProperty(value = "密码", name = "password", example = "admin")
+	@ApiModelProperty(value = "密码", name = "password", example = "test")
 	private String password;
-	@ApiModelProperty(value = "角色", name = "role", example = "ADMIN")
+	@ApiModelProperty(value = "角色", name = "role", example = "test")
 	private String role;
 	
 	public String getUsername() {

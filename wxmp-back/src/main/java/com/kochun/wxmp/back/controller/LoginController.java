@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -83,7 +84,7 @@ public class LoginController {
                     return new ResponseEntity<>(responseResult, HttpStatus.OK);
                 }
                 if (user.getStatus() == SysUser.STATUS_DISABLE) {
-                    if (LocalDateTime.now().compareTo(user.getBanTime()) < 0) {
+                    if (LocalDate.now().compareTo(user.getBanTime()) < 0) {
                         responseResult.setMessage("用户被禁用");
                         return new ResponseEntity<>(responseResult, HttpStatus.OK);
                     } else {

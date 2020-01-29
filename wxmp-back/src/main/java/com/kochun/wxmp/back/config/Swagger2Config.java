@@ -55,7 +55,7 @@ public class Swagger2Config implements WebMvcConfigurer {
         Parameter parameter = builder
                 // 从cookie中获取token
                 .parameterType("header") //参数类型支持header, cookie, body, query etc
-                .name("accessToken") //参数名
+                .name("Authorization") //参数名
                 .defaultValue("") //默认值
                 .description("请输入token")
                 .modelRef(new ModelRef("string")) //指定参数值的类型

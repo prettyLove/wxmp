@@ -3,11 +3,14 @@ package com.kochun.wxmp.core.entity.system;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -63,6 +66,7 @@ public class SysUser implements Serializable {
     /**
      * 出生日期
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime birthday;
 
     /**
@@ -76,8 +80,9 @@ public class SysUser implements Serializable {
     @TableField(value = "is_super")
     private Boolean supered;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime gmtCreate;
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime gmtModified;
 
     /**
@@ -88,7 +93,8 @@ public class SysUser implements Serializable {
     /**
      * 禁用时间
      */
-    private LocalDateTime banTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate banTime;
 
     /***
      * 盐  用于加密 @TableField(exist = false)代表不属于表字段

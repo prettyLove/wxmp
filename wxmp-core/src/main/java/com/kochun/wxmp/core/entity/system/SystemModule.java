@@ -2,6 +2,7 @@ package com.kochun.wxmp.core.entity.system;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import java.time.LocalDateTime;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,11 +10,11 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author kochun
- * @since 2019-09-18
+ * @since 2019-12-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -23,62 +24,78 @@ public class SystemModule implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 系统模块ID
+     * ID
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 模块编码
+     * 是否外链
+     */
+    private Boolean iFrame;
+
+    /**
+     * 编码
      */
     private String code;
 
     /**
-     * 模块名称
+     * 菜单名称
      */
     private String name;
 
     /**
-     * 上级模块ID
+     * 组件
      */
-    private String pid;
+    private String component;
 
     /**
-     * 模块URL
+     * 上级菜单ID
      */
-    private String url;
+    private Long pid;
 
     /**
-     * shiro权限集
+     * 排序
      */
-    private String perms;
+    private Long sort;
 
     /**
-     * 排序值
+     * 图标
      */
-    private Integer sort;
+    private String icon;
 
     /**
-     * 图标路径
+     * 链接地址
      */
-    private String iconUrl;
+    private String path;
 
     /**
-     * 是否显示：
+     * vue前端是否缓存
      */
-    private Boolean isShow;
+    private Boolean cache;
 
     /**
-     * 是否删除
+     * 菜单是否显示
      */
-    private Boolean isDeleted;
+    private Boolean hidden;
+
+    /**
+     * VUE组件名
+     */
+    private String componentName;
+
+    /**
+     * 创建日期
+     */
+    private LocalDateTime createTime;
+
+    /**
+     * 权限标识
+
+     */
+    private String permission;
 
     private Integer type;
-
-    /**
-     * 菜单的级别
-     */
-    private Integer level;
 
 
 }

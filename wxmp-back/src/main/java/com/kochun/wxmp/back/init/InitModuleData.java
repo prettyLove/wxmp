@@ -33,11 +33,11 @@ public class InitModuleData implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("初始化基础数据  start");
-        List<RoleSystemModuleVO> list=systemModuleService.listRoleSystemModuleVO();
-
-        list.forEach(roleSystemModuleVO -> {
-            redisService.set(roleSystemModuleVO.getRoleCode()+Constant.PREFIX_ROLE_SYSMODULE_KEY.replace("{regex}",roleSystemModuleVO.getModuleUrl()),roleSystemModuleVO);
-        });
+//        List<RoleSystemModuleVO> list=systemModuleService.listRoleSystemModuleVO();
+//
+//        list.forEach(roleSystemModuleVO -> {
+//            redisService.set(roleSystemModuleVO.getRoleCode()+Constant.PREFIX_ROLE_SYSMODULE_KEY.replace("{regex}",roleSystemModuleVO.getModuleUrl()),roleSystemModuleVO);
+//        });
         log.info("初始化基础数据  end");
     }
 
