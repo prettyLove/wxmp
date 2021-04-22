@@ -21,7 +21,7 @@
         <module>wxmp-webapi</module>
     </modules>
     <properties>
-        <shiro-spring.version>1.4.0</shiro-spring.version>
+        <shiro-spring.version>1.7.0</shiro-spring.version>
         <shiro-redis.version>2.4.2.1-RELEASE</shiro-redis.version>
         <jwt.version>3.4.0</jwt.version>
         <jedis.version>2.9.0</jedis.version>
